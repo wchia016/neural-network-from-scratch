@@ -1,6 +1,6 @@
 # Neural Network From Scratch + California Housing Regression
 
-A two-part project that first builds a complete neural network library from scratch using only NumPy — implementing forward/backward propagation, loss functions, and mini-batch SGD by hand — then applies PyTorch to a real-world regression task: predicting California median house values with a hyperparameter-optimized deep network, achieving **R²=0.79** and **RMSE=$54,426** on the test set.
+A two-part project that first builds a complete neural network library from scratch using only NumPy — implementing forward/backward propagation, loss functions, and mini-batch SGD by hand — then applies PyTorch to a real-world regression task: predicting California median house values with a hyperparameter-optimized deep network, achieving **R²≈0.79** and **RMSE≈$54,400** on the test set.
 
 **Built for:** Demonstrating foundational understanding of how neural networks learn (gradient computation, weight updates, loss surfaces) alongside practical ML engineering (data pipelines, hyperparameter search, early stopping).
 
@@ -82,9 +82,9 @@ Raw Data (housing.csv)
 
 | Metric | Value |
 |---|---|
-| **RMSE** | $54,426 |
-| **MAE** | $35,645 |
-| **R²** | 0.79 |
+| **RMSE** | ~$54,400 |
+| **MAE** | ~$35,600 |
+| **R²** | ~0.79 |
 | **Epochs** | 68 (early stopped from 1000) |
 
 ### Best Hyperparameters (via 10-fold CV Grid Search)
@@ -107,7 +107,7 @@ Searched over 864 combinations (2 LR x 2 WD x 3 layers x 4 neurons x 3 batch x 2
 .
 ├── part1_nn_lib.py                  # From-scratch neural network library (NumPy)
 ├── part2_house_value_regression.py  # California housing regressor (PyTorch)
-├── housing.csv                      # California housing dataset (20,640 samples, 10 features)
+├── housing.csv                      # California housing dataset (16,512 samples, 9 features + 1 target)
 ├── iris.dat                         # Iris dataset for Part 1 validation
 ├── part2_model.pickle               # Trained model checkpoint
 ├── log_regression.log               # Training log with per-epoch metrics
